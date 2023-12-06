@@ -1,5 +1,9 @@
+import javafx.fxml.FXML;
+import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.paint.Color;
+
 import java.util.Random;
 
 /**
@@ -7,18 +11,23 @@ import java.util.Random;
  */
 public class Controller {
     // Constants for the width and height of the canvas
-    private static final int WIDTH = 800;
-    private static final int HEIGHT = 600;
+    private static final int WIDTH = 200;
+    private static final int HEIGHT = 200;
     // Maximum size for the shapes
     private static final int MAX_SHAPE_SIZE = WIDTH / 4;
     // Random number generator
     private final Random random = new Random();
     // Graphics context for drawing on the canvas
-    private final GraphicsContext gc;
+    private GraphicsContext gc;
     // Number of shapes to draw
     private final int NUMBER_OF_SHAPES = 10;
     // Number of different shape types
     private final int NUMBER_OF_SHAPES_TYPES = 3;
+
+    @FXML
+    private Canvas canvas;
+    @FXML
+    private Button button;
 
     // Enum for the different shape types
     enum ShapeType {
@@ -27,12 +36,10 @@ public class Controller {
         LINE
     }
 
-    /**
-     * Constructor for the Controller class.
-     * @param gc The graphics context for drawing on the canvas.
-     */
-    public Controller(GraphicsContext gc) {
-        this.gc = gc;
+    @FXML
+    public void initialize() {
+        gc = canvas.getGraphicsContext2D();
+        button.setOnAction(event -> drawRandomShapes());
     }
 
     /**
