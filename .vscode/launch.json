@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "Q2.Main",
+            "projectName": "JavaCS20554_c558100a"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Q1.Main",
             "projectName": "JavaCS20554_c558100a"
         },
