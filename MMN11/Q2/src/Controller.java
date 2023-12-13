@@ -10,11 +10,8 @@ import java.util.Random;
  * The Controller class is responsible for drawing random shapes on a canvas.
  */
 public class Controller {
-    // Constants for the width and height of the canvas
-    private static final int WIDTH = 200;
-    private static final int HEIGHT = 200;
     // Maximum size for the shapes
-    private static final int MAX_SHAPE_SIZE = WIDTH / 4;
+    private static final double SHAPE_SCALE = 0.25;
     // Random number generator
     private final Random random = new Random();
     // Graphics context for drawing on the canvas
@@ -28,6 +25,8 @@ public class Controller {
     private Canvas canvas;
     @FXML
     private Button button;
+
+
 
     // Enum for the different shape types
     enum ShapeType {
@@ -46,6 +45,9 @@ public class Controller {
      * This method draws a number of random shapes on the canvas.
      */
     public void drawRandomShapes() {
+        final int WIDTH = (int) canvas.getWidth(); // The width of the canvas
+        final int HEIGHT = (int) canvas.getHeight(); // The height of the canvas
+        final int SHAPE_SIZE = (int) (WIDTH * SHAPE_SCALE); // The maximum size of the shapes
         // Clear the canvas
         gc.clearRect(0, 0, WIDTH, HEIGHT);
 
@@ -54,7 +56,7 @@ public class Controller {
             // Set a random color
             gc.setFill(new Color(random.nextDouble(), random.nextDouble(), random.nextDouble(), 1.0));
             // Determine the size and position of the shape
-            int size = random.nextInt(MAX_SHAPE_SIZE);
+            int size = random.nextInt(SHAPE_SIZE);
             int x = random.nextInt(WIDTH);
             int y = random.nextInt(HEIGHT);
 

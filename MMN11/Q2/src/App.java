@@ -17,6 +17,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         // Load the FXML file
         Parent root = FXMLLoader.load(getClass().getResource("window.fxml"));
+        primaryStage.setTitle("Shapes drewing application");
 
         // Set the scene of the primary stage
         primaryStage.setScene(new Scene(root));
