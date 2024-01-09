@@ -9,5 +9,6 @@
         "c:\\Java\\javafx-sdk-17.0.9\\lib\\javafx.swing.jar",
         "c:\\Java\\javafx-sdk-17.0.9\\lib\\javafx.web.jar",
         "c:\\Java\\javafx-sdk-17.0.9\\lib\\javafx-swt.jar"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }

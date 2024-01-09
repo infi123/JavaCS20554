@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QuizApp",
+            "request": "launch",
+            "mainClass": "Q1.QuizApp",
+            "projectName": "JavaCS20554_c558100a"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Q2.Main",
