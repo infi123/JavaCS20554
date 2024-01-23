@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PhoneBookApp",
+            "request": "launch",
+            "mainClass": "Q2.PhoneBookApp",
+            "projectName": "JavaCS20554_c558100a"
+        },
+        {
+            "type": "java",
             "name": "QuizApp",
             "request": "launch",
             "mainClass": "Q1.QuizApp",
